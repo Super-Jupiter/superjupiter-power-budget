@@ -1,0 +1,49 @@
+{
+  "name": "SuperJupiterPowerBudget",
+  "version": "0.1.0",
+  "description": "Transparent battery-current duty-cycle and runtime estimates. Portable C++11 by SuperJupiter. Hardware validation pending.",
+  "keywords": [
+    "sensor",
+    "embedded",
+    "esp32",
+    "arduino",
+    "power-budget"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Super-Jupiter/superjupiter-power-budget.git"
+  },
+  "homepage": "https://github.com/Super-Jupiter/superjupiter-power-budget",
+  "authors": [
+    {
+      "name": "SuperJupiter",
+      "url": "https://www.superjupiter.net",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "frameworks": "*",
+  "platforms": "*",
+  "headers": [
+    "SuperJupiterPowerBudget.h"
+  ],
+  "export": {
+    "include": [
+      "src/*",
+      "examples/*",
+      "docs/*",
+      "tests/*",
+      "tools/*",
+      "README.md",
+      "LICENSE",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "SECURITY.md",
+      "CMakeLists.txt",
+      "library.json",
+      "library.properties",
+      "cmake/*",
+      "extras/*"
+    ]
+  }
+}
