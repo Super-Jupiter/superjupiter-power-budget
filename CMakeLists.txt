@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(SuperJupiterPowerBudget VERSION 0.1.0 LANGUAGES CXX)
+project(SuperJupiterPowerBudget VERSION 0.1.1 LANGUAGES CXX)
 
 set(_superjupiter_power_budget_top_level OFF)
 if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
@@ -19,6 +19,9 @@ target_compile_features(SuperJupiterPowerBudget INTERFACE cxx_std_11)
 
 if(SUPERJUPITER_POWER_BUDGET_BUILD_TESTS)
   enable_testing()
+  add_executable(superjupiter-power-budget-review tests/review_regressions.cpp)
+  target_link_libraries(superjupiter-power-budget-review PRIVATE SuperJupiter::PowerBudget)
+  add_test(NAME superjupiter-power-budget-review COMMAND superjupiter-power-budget-review)
   add_executable(superjupiter-power-budget-tests tests/test.cpp)
   target_link_libraries(superjupiter-power-budget-tests PRIVATE SuperJupiter::PowerBudget)
   add_test(NAME superjupiter-power-budget-tests COMMAND superjupiter-power-budget-tests)
